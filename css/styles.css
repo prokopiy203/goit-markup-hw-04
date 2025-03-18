@@ -23,8 +23,7 @@ body {
   position: relative;
 }
 
-.home-header-active::before,
-.about-header-active:hover {
+.home-header-active::after {
   content: "";
   top: 95%;
   left: 0;
