@@ -11,10 +11,28 @@ body {
   letter-spacing: 0.02em;
   color: #2e2f42;
   padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-header-studio {
+  color: #404bbf;
 }
 
 .nav-header-li {
   padding: 24px 0;
+  position: relative;
+}
+
+.home-header-active::before,
+.about-header-active:hover {
+  content: "";
+  top: 95%;
+  left: 0;
+  position: absolute;
+  border-radius: 2px;
+  width: 48px;
+  height: 4px;
+  background: #404bbf;
 }
 
 .nav-header:hover,
@@ -47,6 +65,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:hover,
 .address-link:focus {
@@ -57,21 +76,13 @@ body {
   color: #f4f4fd;
 }
 
-.footer-wrapper {
-  background-color: #2e2f42;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
 .footer-dscr {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
+  margin-bottom: 16px;
 }
 
 a {
@@ -227,6 +238,7 @@ ul {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-service:hover,
@@ -404,7 +416,8 @@ img {
   height: 32px;
   border-radius: 100%;
   gap: 24px;
-  margin-top: 8px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-icon {
@@ -418,8 +431,56 @@ img {
   background-color: #404bbf;
 }
 
-.container .footer-contacts {
+.footer-link-svg:hover,
+.footer-link-svg:focus {
+  background-color: #31d0aa;
+}
+
+.footer-wrapper {
+  background-color: #2e2f42;
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.socials {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 16px;
+}
+.fotter-wrapper-content {
+  margin-right: 120px;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.overlay-container {
+  position: relative;
+  display: block;
+  width: 360px;
+  overflow: hidden;
+}
+
+.overlay-container-dsrc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  transform: translateY(100%);
+  background: #4d5ae5;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item-li:hover .overlay-container-dsrc {
+  transform: translateY(0);
 }
