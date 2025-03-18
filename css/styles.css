@@ -11,6 +11,9 @@ body {
   letter-spacing: 0.02em;
   color: #2e2f42;
   padding: 24px 0;
+}
+
+.nav-header-wrapper-ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -23,13 +26,13 @@ body {
   position: relative;
 }
 
-.home-header-active::after {
+.nav-header-studio::after {
   content: "";
-  top: 95%;
   left: 0;
+  bottom: -1px;
   position: absolute;
   border-radius: 2px;
-  width: 48px;
+  width: 100%;
   height: 4px;
   background: #404bbf;
 }
@@ -109,6 +112,7 @@ ul {
   background-position: center;
   height: 600px;
   width: 100%;
+  max-width: 1440px;
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -176,10 +180,20 @@ ul {
   text-align: center;
   color: #2e2f42;
 }
-
 .team-list-item .thumb-team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 32px;
+}
+
+.team-list-item-li .thumb-team {
   padding: 0px 0px 32px 0px;
   box-sizing: border-box;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  border-radius: 0 0 4px 4px;
   width: 264px;
   background: #fff;
   background-color: #ffffff;
@@ -263,6 +277,9 @@ img {
 .header-wrapper {
   border-bottom: 1px solid #e7e9fc;
   width: 100%;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
 }
 
 .header-wrapper .container {
@@ -315,14 +332,6 @@ img {
   gap: 24px;
 }
 
-.team-list-item .thumb-team {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 32px;
-}
-
 .portfolio-wrapper {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -350,6 +359,7 @@ img {
 
 .portfolio-list-item-li {
   width: calc((100% - 48px) / 3);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item .thumb-team {
@@ -404,15 +414,26 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.socials-link {
+.socials {
   display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 24px;
+}
+
+.socials-footer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.socials-link {
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;
   border-radius: 50%;
-  gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -435,13 +456,6 @@ img {
 
   padding-top: 100px;
   padding-bottom: 100px;
-}
-
-.socials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
 }
 
 .fotter-wrapper-content {
