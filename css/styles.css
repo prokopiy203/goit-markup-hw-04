@@ -398,7 +398,6 @@ img {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   color: #4d5ae5;
   display: inline-block;
   margin-bottom: 16px;
@@ -408,11 +407,6 @@ img {
   display: flex;
   justify-content: center;
   gap: 16px;
-}
-
-.footer-link-svg:hover,
-.footer-link-svg:focus {
-  background-color: #31d0aa;
 }
 
 .footer-wrapper {
@@ -530,6 +524,11 @@ img {
 .socials-link:hover,
 .socials-link:focus {
   background-color: #404bbf;
+}
+
+.socials-footer .footer-link-svg:hover,
+.socials-footer .footer-link-svg:focus {
+  background-color: #31d0aa;
 }
 
 /* ========== Icons ========== */
